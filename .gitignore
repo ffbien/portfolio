@@ -36,7 +36,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
-/.openai/hosting.json
 
 # local portfolio media previews and hardlinks
 /public/media/
