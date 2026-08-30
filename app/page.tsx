@@ -29,7 +29,8 @@ type Project = {
 };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
-const siteAsset = (path: string) => `${basePath}${path}`;
+const mediaBaseUrl = (process.env.NEXT_PUBLIC_MEDIA_BASE_URL ?? basePath).replace(/\/$/, '');
+const siteAsset = (path: string) => `${mediaBaseUrl}${path}`;
 
 const projects: Project[] = [
   {

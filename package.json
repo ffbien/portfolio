@@ -8,10 +8,12 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs",
     "build:pages": "next build && node scripts/strip-local-media-from-export.mjs",
+    "deploy:cloudflare": "wrangler deploy --config wrangler.jsonc",
     "preview:pages": "node scripts/serve-pages-export.mjs",
     "start": "vinext start",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .wrangler"
   },
   "packageManager": "pnpm@11.19.0",
   "dependencies": {
